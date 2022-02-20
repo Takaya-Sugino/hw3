@@ -2,12 +2,13 @@
 
 <ul>
   <% for post in @place.posts %>
-  <li><p><%= @post.title %></p>
-      <p><%= @post.posted_on %></p> 
-      <p><%= @post.description %></p>
+  <li><p><%= "#{post.title}" %></p>
+      <p><%= "#{post.posted_on}" %></p> 
+      <p><%= "#{post.description}" %></p>
   </li>
-  <% end %>  
+  <% end %>
+</ul> 
 
 <p>
-<a href="/posts/new?post_id=<%= @place.id %>">Create new posts</a>
+<a href="/posts/new?place_id=<%= @place.id %>">Create new posts</a>
 </p>
